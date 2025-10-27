@@ -1,0 +1,7 @@
+esp32_watch_iot/.devcontainer
+esp32_watch_iot/.vscode
+esp32_watch_iot/build
+Material
+*.clangd
+
+
