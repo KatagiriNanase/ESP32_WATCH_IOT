@@ -5,9 +5,22 @@
 #include <stdint.h>
 #include "esp_http_client.h"
 typedef struct {
-    char* weather_text;
-    uint8_t temp;
+    int8_t code;   //天气代码
+    int8_t temp;
 }weather_t;
+
+typedef struct {
+    int8_t high;
+    int8_t low;
+    int8_t code;
+} weather_day_t;
+
+typedef struct {
+    weather_day_t day[3];
+} weather_forecast_t;
+
+extern weather_t weather;
+extern weather_forecast_t weather_forecast;
 
 /**
  *@brief 初始化weather所需的http协议
@@ -34,8 +47,8 @@ void weather_url_concat(const char* location, char* url);
 /**
  * @brief 获取某地的天气、温度
  *
- * @param location 
- * @param weather 
+ * @param location
+ * @param weather
  */
-esp_err_t weather_get(const char* location, weather_t* weather);
+esp_err_t weather_get(const char* location, weather_t* weather, weather_forecast_t* weather_forecast);
 #endif /* __WEATHER_H__ */
