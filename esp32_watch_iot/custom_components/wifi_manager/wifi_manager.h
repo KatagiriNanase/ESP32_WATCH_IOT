@@ -8,6 +8,9 @@
 #include "esp_netif.h"
 #include "esp_err.h"
 
+#define WIFI_CONNECTED_BIT BIT0
+#define WIFI_FAIL_BIT      BIT1
+
 void wifi_manager_init_sta(void);
 
 /**

@@ -1,6 +1,13 @@
 esp32_watch_iot/.devcontainer
 esp32_watch_iot/.vscode
 esp32_watch_iot/build
+esp32_watch_iot/custom_components/oneNet/mqtt.c
+esp32_watch_iot/custom_components/weather/weather.c
+esp32_watch_iot/custom_components/wifi_manager/wifi_manager.c
+esp32_watch_iot/components/lvgl
+esp32_watch_iot/components/lvgl_gui
+esp32_watch_iot_gui
+
 Material
 *.clangd
 
